@@ -70,11 +70,7 @@ def main():
         lmList = detector.findPosition(frame=frame , draw=False)
         if len(lmList) != 0 :
             finguresUp = detector.findFingersUp(frame=frame)
-            # print(finguresUp)
-            x1 , y1 = lmList[3][1:]
-            x2 , y2 = lmList[6][1:]
-            length = detector.findLength( x1 , y1 , x2 , y2 ,frame=frame , draw = False )
-            print(length)
+            print(finguresUp)
 
         currentTime = time.time()
         fps = 1/(currentTime-previousTime)
